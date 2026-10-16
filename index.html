@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <meta name="description" content="stack собирает скриншоты в углу Mac: свои — чтобы отправить в чат, снимки от ИИ — в отдельную стопку по проектам. Подключение одной готовой инструкцией.">
+  <title>stack — скриншоты под рукой</title>
+  <link rel="icon" href="favicon.ico" sizes="16x16 32x32 48x48" type="image/x-icon">
+  <link rel="icon" href="assets/favicon.svg" sizes="any" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/fonts.css">
+  <link rel="stylesheet" href="assets/site.css?v=10">
+</head>
+<body class="ids">
+  <a class="skip-link" href="#main">К содержанию</a>
+  <header class="ids__wrapper masthead">
+    <button class="brand" type="button" popovertarget="corner-preview" aria-label="Паттерн stack"><img src="assets/stack-corner-logo.svg" width="960" height="520" alt=""></button>
+    <div class="corner-preview" id="corner-preview" popover>
+      <img src="visuals/stack-reveal.svg" width="3200" height="2000" alt="Паттерн stack: светлая надпись STACK и повторяющиеся тёмные надписи на графитовом фоне.">
+    </div>
+    <nav aria-label="Разделы страницы"><a href="#how">Как работает</a><a href="#ai">Скриншоты ИИ</a><a href="#download">Скачать</a></nav>
+  </header>
+
+  <main id="main">
+    <section class="ids__wrapper hero" aria-labelledby="page-title">
+      <h1 id="page-title">Скриншоты под&nbsp;рукой.</h1>
+      <div class="hero-bottom">
+        <p class="lead">Последние снимки собираются в стопку у края экрана. Достань нужные и перетащи в чат.</p>
+        <div class="hero-download">
+          <div class="hero-actions">
+            <a class="download-link" href="https://github.com/tarsturs/stack-releases/releases/latest/download/stack-macOS-universal.zip">Скачать stack <span aria-hidden="true">↓</span></a>
+            <a class="caption" href="#download">Как установить</a>
+          </div>
+          <p class="caption">macOS 14+ · Intel и Apple silicon</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="ids__wrapper feature" id="how" aria-labelledby="corner-title">
+      <div class="chapter-main">
+        <h2 id="corner-title">Наведи курсор в угол</h2>
+        <p>Снимай как обычно — <kbd>⌘⇧4</kbd>. stack сам подхватит новые снимки. Когда они понадобятся, подведи курсор к углу экрана.</p>
+      </div>
+      <figure class="demo">
+        <video controls autoplay muted loop playsinline preload="metadata" width="936" height="742" poster="assets/stack-demo-poster.jpg" aria-label="Запись экрана: stack раскрывает скриншот из нижнего правого угла" aria-describedby="demo-caption">
+          <source src="assets/stack-demo.mp4" type="video/mp4">
+          <a href="assets/stack-demo.mp4">Открыть запись экрана</a>
+        </video>
+        <figcaption id="demo-caption">Угол можно выбрать в меню stack.</figcaption>
+      </figure>
+    </section>
+
+    <section class="ids__wrapper feature" aria-labelledby="send-title">
+      <div class="chapter-main">
+        <h2 id="send-title">Выбери нужные снимки</h2>
+        <p>Нажми на стопку, чтобы раскрыть список. Выбери один или несколько снимков и перетащи их в чат — каждый отправится отдельным файлом.</p>
+      </div>
+      <div class="selection-demo">
+        <figure class="selection-figure">
+          <img class="chapter-image" src="assets/stack-expanded.png" width="1072" height="1172" loading="lazy" decoding="async" alt="Раскрытая стопка из трёх скриншотов; нижний снимок выделен жёлтой рамкой.">
+        </figure>
+        <div class="selection-controls">
+          <dl class="shortcuts">
+            <div><dt><kbd>⌘</kbd> + клик</dt><dd>Выбрать несколько снимков</dd></div>
+            <div><dt><kbd>⇧</kbd> + клик</dt><dd>Выбрать диапазон</dd></div>
+            <div><dt><kbd>Пробел</kbd></dt><dd>Посмотреть крупнее перед отправкой</dd></div>
+            <div><dt><kbd>⌘C</kbd></dt><dd>Скопировать выбранные файлы</dd></div>
+          </dl>
+          <p>Снимков много? Прокрути стопку. История сохраняется после перезапуска приложения.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="ids__wrapper feature" id="ai" aria-labelledby="ai-title">
+      <div class="chapter-main">
+        <h2 id="ai-title">Скриншоты от ИИ — в другом углу</h2>
+        <p>Попроси агента сохранять снимки для stack. Они появятся в противоположном углу с названием проекта. У каждого проекта своя история — новые снимки не переключают уже открытый просмотр.</p>
+        <ol class="setup-steps">
+          <li>В меню stack нажми <strong>Copy Instructions for AI</strong>.</li>
+          <li>Вставь готовую инструкцию в чат или настройки агента.</li>
+        </ol>
+        <p>Больше ничего настраивать не нужно. stack сам создаёт общую папку, а агент — подпапку своего проекта. Когда он сохранит снимок, stack его подхватит.</p>
+        <details>
+          <summary>Где хранятся снимки</summary>
+          <p>По умолчанию — в <code>~/Pictures/stack/AI</code>, в подпапках проектов. Другую папку можно выбрать в <strong>Advanced AI Settings</strong>; готовая инструкция будет использовать её путь.</p>
+        </details>
+      </div>
+    </section>
+
+    <section class="ids__wrapper install" id="download" aria-labelledby="install-title">
+      <div class="chapter-main">
+        <h2 id="install-title">Попробуй на своих скриншотах</h2>
+        <p><a class="download-link" href="https://github.com/tarsturs/stack-releases/releases/latest/download/stack-macOS-universal.zip">Скачать stack для Mac <span aria-hidden="true">↓</span></a></p>
+        <p class="caption">macOS 14 и новее · Intel и Apple silicon</p>
+        <ol>
+          <li>Распакуй ZIP, перенеси <strong>stack.app</strong> в «Программы» и запусти.</li>
+          <li>Для своих скриншотов в <kbd>⌘⇧5</kbd> → «Параметры» выбери место сохранения. В меню stack → <strong>Choose Watched Folder…</strong> укажи ту же папку. stack не меняет настройки macOS.</li>
+          <li>Чтобы не видеть два preview, выключи <strong>«Показывать плавающую миниатюру»</strong> в меню <kbd>⌘⇧5</kbd> → «Параметры».</li>
+          <li>Сделай скриншот. Он появится в стопке.</li>
+        </ol>
+        <p class="caption">Для снимков от ИИ выбор папки не нужен — <a href="#ai">подключи агента готовой инструкцией</a>.</p>
+        <details>
+          <summary>Если macOS не даёт открыть приложение</summary>
+          <p>Сборка пока не нотарифицирована Apple. После попытки запуска открой «Системные настройки → Конфиденциальность и безопасность» и разреши запуск через «Всё равно открыть» (Open Anyway).</p>
+        </details>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
