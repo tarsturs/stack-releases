@@ -9,7 +9,7 @@
   <link rel="icon" href="favicon.ico" sizes="16x16 32x32 48x48" type="image/x-icon">
   <link rel="icon" href="assets/favicon.svg" sizes="any" type="image/svg+xml">
   <link rel="stylesheet" href="assets/fonts.css">
-  <link rel="stylesheet" href="assets/site.css?v=14">
+  <link rel="stylesheet" href="assets/site.css?v=15">
 </head>
 <body class="ids">
   <a class="skip-link" href="#main">К содержанию</a>
@@ -23,12 +23,11 @@
 
   <main id="main">
     <section class="ids__wrapper hero" aria-labelledby="page-title">
-      <h1 id="page-title">Скриншоты под&nbsp;рукой.</h1>
-      <figure class="hero-product">
-        <img class="chapter-image" src="assets/stack-expanded.png" width="1072" height="1172" fetchpriority="high" decoding="async" alt="Раскрытая стопка из трёх скриншотов у края экрана; нижний снимок выделен жёлтой рамкой.">
-      </figure>
-      <div class="hero-bottom">
-        <p class="lead">stack собирает скриншоты и записи экрана в углу Mac. Выбери нужные и перетащи в чат — без поиска файлов.</p>
+      <div class="hero-copy">
+        <p class="hero-eyebrow">stack для Mac</p>
+        <h1 id="page-title">Скриншоты под&nbsp;рукой.</h1>
+        <p class="lead">Снимки и записи экрана — в углу Mac,<br class="desktop-break"> а не где-то в папках.</p>
+      </div>
         <div class="hero-download">
           <p class="caption">macOS 14+</p>
           <div class="hero-actions">
@@ -36,13 +35,39 @@
             <a class="caption" href="#download">Установка</a>
           </div>
         </div>
-      </div>
+      <figure class="hero-product">
+        <div class="hero-scene" role="img" aria-label="Схема отправки: настоящая стопка stack у правого края экрана. Из выделенного снимка стрелка ведёт в поле сообщения с вложением.">
+          <div class="scene-desktop" aria-hidden="true">Перетащи в любой чат</div>
+          <div class="scene-chat" aria-hidden="true">
+            <div class="scene-chat-title">Посмотри, вот скриншот</div>
+            <div class="scene-composer">
+              <div class="scene-attachment">
+                <img src="assets/stack-attachment.webp" width="472" height="308" alt="" decoding="async">
+                <span>Скриншот.png</span>
+              </div>
+              <div class="scene-input"><span>Добавить сообщение…</span><span class="scene-send">↑</span></div>
+            </div>
+          </div>
+          <div class="scene-stack" aria-hidden="true">
+            <span class="scene-stack-label">Выбери в stack</span>
+            <img src="assets/stack-hero.webp" width="510" height="1066" fetchpriority="high" decoding="async" alt="">
+          </div>
+          <svg class="scene-drag scene-drag-wide" viewBox="0 0 1100 480" preserveAspectRatio="none" fill="none" aria-hidden="true">
+            <path d="M 972 405 C 750 480, 585 435, 450 290" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-dasharray="5 7"/>
+            <path d="m 450 305 -1 -16 16 1" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <svg class="scene-drag scene-drag-compact" viewBox="0 0 600 500" fill="none" aria-hidden="true">
+            <path d="M 461 411 C 365 471, 278 438, 266 346" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-dasharray="5 7"/>
+            <path d="m 257 357 9 -13 12 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+      </figure>
     </section>
 
     <section class="ids__wrapper feature" id="how" aria-labelledby="corner-title">
       <div class="chapter-main">
         <h2 id="corner-title">Снимай как обычно</h2>
-        <p>Делай скриншоты и записывай экран средствами macOS. stack соберёт новые файлы из выбранной папки в одну стопку.</p>
+        <p>Делай скриншоты и записывай экран средствами macOS. stack соберёт новые файлы из выбранной папки в одну стопку. Пользуешься Shottr? <a href="#screenshot-apps">Настрой сохранение в ту же папку</a>.</p>
       </div>
       <figure class="demo">
         <video controls autoplay muted loop playsinline preload="metadata" width="936" height="742" poster="assets/stack-demo-poster.jpg" aria-label="Запись экрана: stack раскрывает скриншот из нижнего правого угла">
@@ -50,6 +75,18 @@
           <a href="assets/stack-demo.mp4">Открыть запись экрана</a>
         </video>
       </figure>
+    </section>
+
+    <section class="ids__wrapper feature" id="screenshot-apps" aria-labelledby="screenshot-apps-title">
+      <div class="chapter-main">
+        <h2 id="screenshot-apps-title">Снимай в Shottr, собирай в stack</h2>
+        <p>Shottr делает снимки и даёт их редактировать. stack подхватывает сохранённые файлы, собирает историю и позволяет отправлять снимки пачкой. Горячие клавиши и превью Shottr он не меняет.</p>
+        <ol class="setup-steps">
+          <li>Выбери одну и ту же папку в <strong>Shottr → Settings… → General → Screenshots folder</strong> и <strong>stack → Settings… → Watched folder → Change…</strong>.</li>
+          <li>В Shottr включи <strong>After screenshot → Save</strong>. Только превью или копирования в буфер обмена недостаточно — stack нужен сохранённый файл.</li>
+        </ol>
+        <p>С другими скриншоталками принцип тот же: сохранение в общую папку и системная метка скриншота у файла. Не каждое приложение ставит эту метку — обычного PNG или похожего имени недостаточно. Совместимость проверена с Shottr; остальные приложения пока не проверяли.</p>
+      </div>
     </section>
 
     <section class="ids__wrapper feature" aria-labelledby="send-title">
@@ -91,7 +128,7 @@
         <p><a class="download-link" href="https://github.com/tarsturs/stack-releases/releases/latest/download/stack-macOS-universal.zip">Скачать для Mac <span aria-hidden="true">↓</span></a></p>
         <ol>
           <li>Распакуй ZIP, перенеси <strong>stack.app</strong> в «Программы» и запусти.</li>
-          <li>В приложении «Снимок экрана» открой «Параметры» и выбери папку для снимков и записей. Укажи её же в меню stack → <strong>Settings… → Watched folder → Change…</strong>.</li>
+          <li>Выбери папку сохранения в своей скриншоталке и укажи её же в меню stack → <strong>Settings… → Watched folder → Change…</strong>. Для системных снимков это «Снимок экрана → Параметры»; для Shottr есть <a href="#screenshot-apps">инструкция выше</a>.</li>
           <li>Сделай новый снимок — он появится в стопке.</li>
         </ol>
         <section class="install-help" aria-labelledby="launch-help-title">
