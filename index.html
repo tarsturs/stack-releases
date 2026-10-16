@@ -4,140 +4,94 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="color-scheme" content="light">
-  <meta name="description" content="stack для Mac собирает скриншоты и записи экрана в углу: выбери нужное и перетащи в чат. Результаты ИИ-агентов — в отдельной стопке по проектам.">
-  <title>stack — скриншоты и видео под рукой</title>
+  <meta name="description" content="Stack для Mac собирает скриншоты и записи экрана в углу: выбери нужное и перетащи в чат. Результаты ИИ-агентов — в отдельной стопке по проектам.">
+  <title>Stack — скриншоты и видео под рукой</title>
   <link rel="icon" href="favicon.ico" sizes="16x16 32x32 48x48" type="image/x-icon">
   <link rel="icon" href="assets/favicon.svg" sizes="any" type="image/svg+xml">
   <link rel="stylesheet" href="assets/fonts.css">
-  <link rel="stylesheet" href="assets/site.css?v=15">
+  <link rel="stylesheet" href="assets/site.css?v=18">
+  <script src="assets/site.js?v=1" defer></script>
 </head>
 <body class="ids">
   <a class="skip-link" href="#main">К содержанию</a>
   <header class="ids__wrapper masthead">
-    <button class="brand" type="button" popovertarget="corner-preview" aria-label="Паттерн stack"><img src="assets/stack-corner-logo.svg" width="960" height="520" alt=""></button>
-    <div class="corner-preview" id="corner-preview" popover>
-      <img src="visuals/stack-reveal.svg" width="3200" height="2000" alt="Паттерн stack: светлая надпись STACK и повторяющиеся тёмные надписи на графитовом фоне.">
-    </div>
+    <img class="brand" src="assets/stack-corner-logo.svg" width="960" height="520" alt="Stack">
     <nav aria-label="Разделы страницы"><a href="#how">Как работает</a><a href="#ai">Результаты ИИ</a><a href="#download">Скачать</a></nav>
   </header>
 
   <main id="main">
     <section class="ids__wrapper hero" aria-labelledby="page-title">
       <div class="hero-copy">
-        <p class="hero-eyebrow">stack для Mac</p>
         <h1 id="page-title">Скриншоты под&nbsp;рукой.</h1>
-        <p class="lead">Снимки и записи экрана — в углу Mac,<br class="desktop-break"> а не где-то в папках.</p>
+        <p class="lead">Снимки и записи экрана — из угла Mac прямо в чат.</p>
       </div>
-        <div class="hero-download">
-          <p class="caption">macOS 14+</p>
-          <div class="hero-actions">
-            <a class="download-link" href="https://github.com/tarsturs/stack-releases/releases/latest/download/stack-macOS-universal.zip">Скачать для Mac <span aria-hidden="true">↓</span></a>
-            <a class="caption" href="#download">Установка</a>
-          </div>
-        </div>
       <figure class="hero-product">
-        <div class="hero-scene" role="img" aria-label="Схема отправки: настоящая стопка stack у правого края экрана. Из выделенного снимка стрелка ведёт в поле сообщения с вложением.">
-          <div class="scene-desktop" aria-hidden="true">Перетащи в любой чат</div>
-          <div class="scene-chat" aria-hidden="true">
-            <div class="scene-chat-title">Посмотри, вот скриншот</div>
-            <div class="scene-composer">
-              <div class="scene-attachment">
-                <img src="assets/stack-attachment.webp" width="472" height="308" alt="" decoding="async">
-                <span>Скриншот.png</span>
-              </div>
-              <div class="scene-input"><span>Добавить сообщение…</span><span class="scene-send">↑</span></div>
-            </div>
-          </div>
-          <div class="scene-stack" aria-hidden="true">
-            <span class="scene-stack-label">Выбери в stack</span>
-            <img src="assets/stack-hero.webp" width="510" height="1066" fetchpriority="high" decoding="async" alt="">
-          </div>
-          <svg class="scene-drag scene-drag-wide" viewBox="0 0 1100 480" preserveAspectRatio="none" fill="none" aria-hidden="true">
-            <path d="M 972 405 C 750 480, 585 435, 450 290" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-dasharray="5 7"/>
-            <path d="m 450 305 -1 -16 16 1" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-          <svg class="scene-drag scene-drag-compact" viewBox="0 0 600 500" fill="none" aria-hidden="true">
-            <path d="M 461 411 C 365 471, 278 438, 266 346" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-dasharray="5 7"/>
-            <path d="m 257 357 9 -13 12 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-        </div>
-      </figure>
-    </section>
-
-    <section class="ids__wrapper feature" id="how" aria-labelledby="corner-title">
-      <div class="chapter-main">
-        <h2 id="corner-title">Снимай как обычно</h2>
-        <p>Делай скриншоты и записывай экран средствами macOS. stack соберёт новые файлы из выбранной папки в одну стопку. Пользуешься Shottr? <a href="#screenshot-apps">Настрой сохранение в ту же папку</a>.</p>
-      </div>
-      <figure class="demo">
-        <video controls autoplay muted loop playsinline preload="metadata" width="936" height="742" poster="assets/stack-demo-poster.jpg" aria-label="Запись экрана: stack раскрывает скриншот из нижнего правого угла">
-          <source src="assets/stack-demo.mp4" type="video/mp4">
-          <a href="assets/stack-demo.mp4">Открыть запись экрана</a>
+        <video class="hero-video" controls autoplay muted loop playsinline preload="metadata" width="1600" height="832" poster="assets/stack-hero-poster.jpg" aria-label="Запись работы Stack: выбор четырёх скриншотов и перетаскивание в чат">
+          <source src="assets/stack-hero.mp4" type="video/mp4">
+          <a href="assets/stack-hero.mp4">Посмотреть демонстрацию Stack</a>
         </video>
       </figure>
-    </section>
-
-    <section class="ids__wrapper feature" id="screenshot-apps" aria-labelledby="screenshot-apps-title">
-      <div class="chapter-main">
-        <h2 id="screenshot-apps-title">Снимай в Shottr, собирай в stack</h2>
-        <p>Shottr делает снимки и даёт их редактировать. stack подхватывает сохранённые файлы, собирает историю и позволяет отправлять снимки пачкой. Горячие клавиши и превью Shottr он не меняет.</p>
-        <ol class="setup-steps">
-          <li>Выбери одну и ту же папку в <strong>Shottr → Settings… → General → Screenshots folder</strong> и <strong>stack → Settings… → Watched folder → Change…</strong>.</li>
-          <li>В Shottr включи <strong>After screenshot → Save</strong>. Только превью или копирования в буфер обмена недостаточно — stack нужен сохранённый файл.</li>
-        </ol>
-        <p>С другими скриншоталками принцип тот же: сохранение в общую папку и системная метка скриншота у файла. Не каждое приложение ставит эту метку — обычного PNG или похожего имени недостаточно. Совместимость проверена с Shottr; остальные приложения пока не проверяли.</p>
+      <div class="hero-download">
+        <p class="caption">macOS 14+</p>
+        <div class="hero-actions">
+          <a class="download-link" href="https://github.com/tarsturs/stack-releases/releases/latest/download/stack-macOS-universal.zip">Скачать для Mac <span aria-hidden="true">↓</span></a>
+          <a class="caption" href="#download">Установка</a>
+        </div>
       </div>
     </section>
 
-    <section class="ids__wrapper feature" aria-labelledby="send-title">
+    <section class="ids__wrapper feature" id="how" aria-labelledby="send-title">
       <div class="chapter-main">
         <h2 id="send-title">Отправь всё нужное</h2>
-        <p>Выбери снимки и видео, затем перетащи их в чат. Они прикрепятся отдельными файлами — без склейки и перекодирования.</p>
-      </div>
-      <div class="selection-controls">
-        <dl class="shortcuts">
-          <div><dt><kbd>⌘</kbd> + клик</dt><dd>Добавить файл к выбору</dd></div>
-          <div><dt><kbd>⇧</kbd> + клик</dt><dd>Выбрать диапазон</dd></div>
-          <div><dt><kbd>Пробел</kbd></dt><dd>Посмотреть снимок или видео</dd></div>
-          <div><dt><kbd>⌘C</kbd></dt><dd>Скопировать выбранные файлы</dd></div>
-        </dl>
+        <p>Несколько снимков и видео отправляются в чат одним перетаскиванием — отдельными файлами, без склейки и перекодирования.</p>
+        <p>Привычные сочетания macOS тоже работают: <kbd>⌘C</kbd>, выделение с <kbd>⌘</kbd> и <kbd>⇧</kbd>, быстрый просмотр по пробелу.</p>
         <p>История сохраняется после перезапуска. Отправка не удаляет исходные файлы.</p>
       </div>
     </section>
 
     <section class="ids__wrapper feature" id="ai" aria-labelledby="ai-title">
       <div class="chapter-main">
-        <h2 id="ai-title">Смотри, что сделал ИИ</h2>
+        <h2 id="ai-title">Скриншоты от ИИ — отдельно по проектам</h2>
         <p>Скриншоты и видео от агента появляются в другом углу. Проекты не смешиваются: у каждого своя история.</p>
-        <figure class="onboarding-demo">
-          <img class="chapter-image" src="assets/stack-onboarding.png" width="720" height="720" loading="lazy" decoding="async" alt="Окно первого запуска stack. В разделе AI captures — кнопка Copy Instructions for AI.">
+        <figure class="ai-projects-demo">
+          <img class="chapter-image" src="assets/stack-ai-projects.webp" width="1506" height="1366" loading="lazy" decoding="async" alt="Три скриншота проекта Stack в левом углу рабочего стола. Нижний снимок выделен жёлтой рамкой.">
         </figure>
-        <ol class="setup-steps">
-          <li>В окне первого запуска нажми кнопку <strong>Copy Instructions for AI</strong>.</li>
-          <li>Вставь инструкцию агенту и попроси показать результат скриншотом или видео.</li>
-        </ol>
-        <p>stack сам создаёт папку <code>~/Pictures/stack/AI</code>. Агент сохраняет туда снимки и видео, отдельно для каждого проекта — ему нужен доступ к файлам на твоём Mac.</p>
+        <p>Скопируй инструкцию через <strong>Copy Instructions for AI</strong> в меню Stack и отправь своему ИИ-агенту. Попроси показать результат скриншотом или видео.</p>
+        <p>Stack сам создаёт папку <code>~/Pictures/stack/AI</code>. Агент сохраняет туда снимки и видео, отдельно для каждого проекта — ему нужен доступ к файлам на твоём Mac.</p>
         <p>Чтобы выбрать другую папку, открой <strong>Settings… → AI capture folder → Change…</strong>. После смены папки скопируй инструкцию заново и передай агенту.</p>
       </div>
     </section>
 
     <section class="ids__wrapper install" id="download" aria-labelledby="install-title">
       <div class="chapter-main">
-        <h2 id="install-title">Установи stack</h2>
+        <h2 id="install-title">Установи Stack</h2>
         <p class="caption">macOS 14+</p>
         <p><a class="download-link" href="https://github.com/tarsturs/stack-releases/releases/latest/download/stack-macOS-universal.zip">Скачать для Mac <span aria-hidden="true">↓</span></a></p>
         <ol>
           <li>Распакуй ZIP, перенеси <strong>stack.app</strong> в «Программы» и запусти.</li>
-          <li>Выбери папку сохранения в своей скриншоталке и укажи её же в меню stack → <strong>Settings… → Watched folder → Change…</strong>. Для системных снимков это «Снимок экрана → Параметры»; для Shottr есть <a href="#screenshot-apps">инструкция выше</a>.</li>
+          <li>Выбери папку сохранения в своей скриншоталке. Для системных снимков открой «Снимок экрана → Параметры»; для Shottr — <a href="#screenshot-apps">настройки ниже</a>.</li>
+          <li>
+            <p>В окне первого запуска Stack нажми <strong>Choose Watched Folder…</strong> и выбери ту же папку.</p>
+            <figure class="onboarding-demo">
+              <img class="chapter-image" src="assets/stack-onboarding.png" width="720" height="720" loading="lazy" decoding="async" alt="Окно первого запуска Stack: кнопка Choose Watched Folder… выбирает папку со снимками.">
+            </figure>
+            <p class="caption">Позже папку можно изменить в меню Stack → <strong>Settings… → Watched folder → Change…</strong>.</p>
+          </li>
           <li>Сделай новый снимок — он появится в стопке.</li>
         </ol>
+        <section class="install-help" id="screenshot-apps" aria-labelledby="screenshot-apps-title">
+          <h3 id="screenshot-apps-title">Со своей скриншоталкой</h3>
+          <p>Скриншоталка сохраняет снимки, а Stack подхватывает их из той же папки. Укажи одну папку в обоих приложениях. Из сторонних скриншоталок пока проверили Shottr.</p>
+          <p>В Shottr выбери эту папку в <strong>Settings… → General → Screenshots folder</strong> и включи <strong>After screenshot → Save</strong>.</p>
+          <p class="caption">Нужен сохранённый файл с системной меткой скриншота — одного копирования в буфер недостаточно.</p>
+        </section>
         <section class="install-help" aria-labelledby="launch-help-title">
           <h3 id="launch-help-title">Если macOS блокирует запуск</h3>
           <p>После первой попытки запуска открой «Системные настройки → Конфиденциальность и безопасность» → «Всё равно открыть» (Open Anyway). Разрешай запуск только сборки, источнику которой доверяешь.</p>
         </section>
         <section class="install-help" aria-labelledby="thumbnail-help-title">
           <h3 id="thumbnail-help-title">Чтобы не было двух миниатюр</h3>
-          <p>В приложении «Снимок экрана» открой «Параметры» и выключи «Показывать плавающую миниатюру». Останется превью stack.</p>
+          <p>В приложении «Снимок экрана» открой «Параметры» и выключи «Показывать плавающую миниатюру». Останется превью Stack.</p>
         </section>
       </div>
     </section>
