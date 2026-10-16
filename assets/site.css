@@ -19,7 +19,7 @@ body { margin: 0; background: var(--ids__background); color: var(--ids__text); f
 .ids__wrapper { width: min(86%, 55rem); margin-inline: auto; }
 a { color: var(--ids__link); text-decoration-thickness: .045em; text-underline-offset: .19em; text-decoration-color: color-mix(in srgb, var(--ids__link) 35%, transparent); }
 a:hover { color: var(--ids__accent); text-decoration-color: currentColor; }
-a:focus-visible, summary:focus-visible, video:focus-visible { outline: 2px solid var(--ids__accent); outline-offset: 5px; }
+a:focus-visible, video:focus-visible { outline: 2px solid var(--ids__accent); outline-offset: 5px; }
 h1, h2, p, figure, dl { margin: 0; }
 h1, h2, strong, dt { font-weight: 500; }
 h1 { color: var(--ids__accent); font-size: var(--type-display); line-height: .99; letter-spacing: -.045em; }
@@ -60,7 +60,8 @@ nav { display: flex; flex-wrap: wrap; gap: 1.4rem; font-size: var(--type-caption
 .lead { max-width: 30rem; line-height: 1.35; }
 .hero-download { margin-top: 1.3rem; }
 .hero-actions { display: flex; flex-wrap: wrap; align-items: baseline; gap: .55rem 1.4rem; }
-.download-link { font-weight: 500; }
+.download-link { display: inline-flex; align-items: center; justify-content: center; gap: .45em; max-width: 100%; min-height: 2.5rem; padding: .55rem .9rem; border-radius: .45rem; background: var(--ids__link); color: var(--ids__background); font-weight: 500; line-height: 1.25; text-decoration: none; }
+.download-link:hover { background: var(--ids__accent); color: var(--ids__background); }
 .hero-download > .caption { margin-top: .45rem; }
 .demo { width: 40rem; max-width: 100%; margin-top: 1.5rem; }
 video { display: block; width: 100%; height: auto; background: #17151b; }
@@ -80,9 +81,8 @@ dd { margin: 0; }
 .onboarding-demo { width: 18rem; max-width: 100%; margin-top: 1.5rem; }
 .setup-steps, .install ol { padding-left: 1.3rem; margin-block: 1.6rem; }
 .setup-steps > li, .install li { padding-left: .2rem; margin-bottom: .6rem; }
-summary { cursor: pointer; color: var(--ids__link); }
-details p { padding-top: .75rem; }
-.chapter-main > details { margin-top: 1rem; }
+.install-help { margin-top: 1.5rem; }
+.install-help h3 { margin: 0 0 .45em; font-size: 1rem; font-weight: 500; }
 .skip-link { position: absolute; top: .4rem; left: .4rem; padding: .6rem; background: var(--ids__background); transform: translateY(-200%); }
 .skip-link:focus { transform: translateY(0); }
 @media (width < 1024px) {

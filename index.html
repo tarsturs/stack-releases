@@ -9,7 +9,7 @@
   <link rel="icon" href="favicon.ico" sizes="16x16 32x32 48x48" type="image/x-icon">
   <link rel="icon" href="assets/favicon.svg" sizes="any" type="image/svg+xml">
   <link rel="stylesheet" href="assets/fonts.css">
-  <link rel="stylesheet" href="assets/site.css?v=11">
+  <link rel="stylesheet" href="assets/site.css?v=12">
 </head>
 <body class="ids">
   <a class="skip-link" href="#main">К содержанию</a>
@@ -31,7 +31,7 @@
             <a class="download-link" href="https://github.com/tarsturs/stack-releases/releases/latest/download/stack-macOS-universal.zip">Скачать для Mac <span aria-hidden="true">↓</span></a>
             <a class="caption" href="#download">Установка</a>
           </div>
-          <p class="caption">macOS 14+ · Intel и Apple silicon</p>
+          <p class="caption">macOS 14+</p>
         </div>
       </div>
     </section>
@@ -82,33 +82,29 @@
           <li>В окне первого запуска нажми кнопку <strong>Copy Instructions for AI</strong>.</li>
           <li>Вставь инструкцию агенту и попроси показать результат скриншотом или видео.</li>
         </ol>
-        <p>Агенту нужен доступ к локальным файлам на твоём Mac.</p>
-        <details>
-          <summary>Куда агент сохраняет файлы</summary>
-          <p>В <code>~/Pictures/stack/AI</code>, в подпапку проекта. stack создаёт общую папку сам. Изменить её можно в <strong>Settings… → AI capture folder → Change…</strong>; затем скопируй инструкцию заново.</p>
-        </details>
+        <p>stack сам создаёт папку <code>~/Pictures/stack/AI</code>. Агент сохраняет туда снимки и видео, отдельно для каждого проекта — ему нужен доступ к файлам на твоём Mac.</p>
+        <p>Чтобы выбрать другую папку, открой <strong>Settings… → AI capture folder → Change…</strong>. После смены папки скопируй инструкцию заново и передай агенту.</p>
       </div>
     </section>
 
     <section class="ids__wrapper install" id="download" aria-labelledby="install-title">
       <div class="chapter-main">
-        <h2 id="install-title">Попробуй на следующем снимке</h2>
-        <p><a class="download-link" href="https://github.com/tarsturs/stack-releases/releases/latest/download/stack-macOS-universal.zip">Скачать stack для Mac <span aria-hidden="true">↓</span></a></p>
-        <p class="caption">macOS 14+ · Intel и Apple silicon. Сборка без нотарификации Apple.</p>
+        <h2 id="install-title">Установи stack</h2>
+        <p><a class="download-link" href="https://github.com/tarsturs/stack-releases/releases/latest/download/stack-macOS-universal.zip">Скачать для Mac <span aria-hidden="true">↓</span></a></p>
+        <p class="caption">macOS 14+</p>
         <ol>
           <li>Распакуй ZIP, перенеси <strong>stack.app</strong> в «Программы» и запусти.</li>
           <li>В приложении «Снимок экрана» открой «Параметры» и выбери папку для снимков и записей. Укажи её же в меню stack → <strong>Settings… → Watched folder → Change…</strong>.</li>
           <li>Сделай новый снимок — он появится в стопке.</li>
         </ol>
-        <p class="caption">Только материалы от ИИ? Выбирать папку не нужно — <a href="#ai">подключи агента</a>.</p>
-        <details>
-          <summary>macOS блокирует запуск?</summary>
+        <section class="install-help" aria-labelledby="launch-help-title">
+          <h3 id="launch-help-title">Если macOS блокирует запуск</h3>
           <p>После первой попытки запуска открой «Системные настройки → Конфиденциальность и безопасность» → «Всё равно открыть» (Open Anyway). Разрешай запуск только сборки, источнику которой доверяешь.</p>
-        </details>
-        <details>
-          <summary>Появляются две миниатюры?</summary>
+        </section>
+        <section class="install-help" aria-labelledby="thumbnail-help-title">
+          <h3 id="thumbnail-help-title">Чтобы не было двух миниатюр</h3>
           <p>В приложении «Снимок экрана» открой «Параметры» и выключи «Показывать плавающую миниатюру». Останется превью stack.</p>
-        </details>
+        </section>
       </div>
     </section>
   </main>
