@@ -70,6 +70,7 @@ kbd { font: inherit; font-weight: 500; white-space: nowrap; }
   }
   .ids__wrapper { width: calc(100% - 2.25rem); }
   .masthead { padding-top: 1.4rem; }
+  .brand { position: static; z-index: auto; margin-bottom: 1rem; }
   nav { gap: .85rem; font-size: .8rem; }
   .hero { gap: 1.2rem; padding-top: 1.8rem; }
   .hero h1 { max-width: 10em; font-size: clamp(2rem, 8.8vw, 2.8rem); }
@@ -78,5 +79,5 @@ kbd { font: inherit; font-weight: 500; white-space: nowrap; }
   .hero-product { margin-top: .5rem; }
   .hero-video { width: 100%; max-height: none; }
   .feature { padding-top: 2.5rem; }
-  .install { padding-top: 3rem; }
+  .install { padding-block: 3rem 2rem; }
 }
