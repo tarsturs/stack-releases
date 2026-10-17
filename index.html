@@ -46,41 +46,46 @@
     <section class="ids__wrapper" id="ai" aria-labelledby="ai-title">
       <div class="chapter-main">
         <h2 id="ai-title">Агентские скриншоты — в другом углу</h2>
-        <p>Stack сам создаёт папку <code>~/Pictures/stack/AI</code>. Агент сохраняет туда снимки и видео, отдельно для каждого проекта — ему нужен доступ к файлам на твоём Mac.</p>
+        <p>Попроси ИИ-агента показать результат работы скриншотом или видео. Его файлы появятся в другом углу, по проектам — отдельно от твоих снимков.</p>
         <figure class="ai-projects-demo">
           <img class="chapter-image" src="assets/stack-ai-projects.webp" width="1506" height="1366" loading="lazy" decoding="async" alt="Три скриншота проекта Stack в левом углу рабочего стола. Нижний снимок выделен жёлтой рамкой.">
         </figure>
-        <p>Скопируй инструкцию через <strong>Copy Instructions for AI</strong> в меню Stack и отправь своему ИИ-агенту. Попроси показать результат скриншотом или видео.</p>
+        <p>Скопируй инструкцию через <strong>Copy Instructions for AI</strong> в меню Stack и отправь агенту. В ней уже указан путь для сохранения файлов. По умолчанию это <code>~/Pictures/stack/AI</code> — Stack создаёт эту папку сам. Агенту нужен доступ к файлам на твоём Mac.</p>
         <p>Чтобы выбрать другую папку, открой <strong>Settings… → AI capture folder → Change…</strong>. После смены папки скопируй инструкцию заново и передай агенту.</p>
       </div>
     </section>
 
     <section class="ids__wrapper install" id="download" aria-labelledby="install-title">
       <div class="chapter-main">
-        <h2 id="install-title">Установи Stack</h2>
+        <h2 id="install-title">Когда скачаешь</h2>
         <p class="caption">macOS 14+</p>
         <p><a class="download-link" href="https://github.com/tarsturs/stack-releases/releases/latest/download/stack-macOS-universal.zip">Скачать для Mac <span aria-hidden="true">↓</span></a></p>
-        <ol>
-          <li>Распакуй ZIP, перенеси <strong>stack.app</strong> в «Программы» и запусти.</li>
-          <li>Выбери папку сохранения в своей скриншоталке. Для системных снимков открой «Снимок экрана → Параметры»; для Shottr — <a href="#screenshot-apps">настройки ниже</a>.</li>
-          <li>
-            <p>В окне первого запуска Stack нажми <strong>Choose Watched Folder…</strong> и выбери ту же папку.</p>
-            <figure class="onboarding-demo">
-              <img class="chapter-image" src="assets/stack-onboarding.png" width="720" height="720" loading="lazy" decoding="async" alt="Окно первого запуска Stack: кнопка Choose Watched Folder… выбирает папку со снимками.">
-            </figure>
-            <p class="caption">Позже папку можно изменить в меню Stack → <strong>Settings… → Watched folder → Change…</strong>.</p>
-          </li>
-          <li>Сделай новый снимок — он появится в стопке.</li>
-        </ol>
+        <p>Распакуй архив, перетащи <strong>stack.app</strong> в «Программы» и открой.</p>
+        <section class="install-help" aria-labelledby="launch-help-title">
+          <h3 id="launch-help-title">Если Mac не даёт открыть Stack</h3>
+          <p>Stack не подписан сертификатом Apple Developer ID и не прошёл проверку Apple. Поэтому Mac может заблокировать первый запуск.</p>
+          <p>Если доверяешь этой сборке, после попытки запуска открой «Системные настройки → Конфиденциальность и безопасность» и нажми «Всё равно открыть» (Open Anyway).</p>
+        </section>
+        <section class="install-help" aria-labelledby="folder-help-title">
+          <h3 id="folder-help-title">Покажи Stack папку со снимками</h3>
+          <p>Stack сам не делает скриншоты — он собирает их из папки. Укажи одну и ту же папку в своей скриншоталке и в Stack.</p>
+          <ol>
+            <li>Выбери папку сохранения в своей скриншоталке. Для системных снимков открой «Снимок экрана → Параметры»; для Shottr — <a href="#screenshot-apps">настройки ниже</a>.</li>
+            <li>
+              <p>В окне первого запуска Stack нажми <strong>Choose Watched Folder…</strong> и выбери ту же папку.</p>
+              <figure class="onboarding-demo">
+                <img class="chapter-image" src="assets/stack-onboarding.png" width="720" height="720" loading="lazy" decoding="async" alt="Окно первого запуска Stack: кнопка Choose Watched Folder… выбирает папку со снимками.">
+              </figure>
+              <p class="caption">Позже папку можно изменить в меню Stack → <strong>Settings… → Watched folder → Change…</strong>.</p>
+            </li>
+            <li>Сделай новый снимок — он появится в стопке.</li>
+          </ol>
+        </section>
         <section class="install-help" id="screenshot-apps" aria-labelledby="screenshot-apps-title">
           <h3 id="screenshot-apps-title">Со своей скриншоталкой</h3>
-          <p>Скриншоталка сохраняет снимки, а Stack подхватывает их из той же папки. Укажи одну папку в обоих приложениях. Из сторонних скриншоталок пока проверили Shottr.</p>
+          <p>Из сторонних скриншоталок пока проверен Shottr.</p>
           <p>В Shottr выбери эту папку в <strong>Settings… → General → Screenshots folder</strong> и включи <strong>After screenshot → Save</strong>.</p>
           <p class="caption">Нужен сохранённый файл с системной меткой скриншота — одного копирования в буфер недостаточно.</p>
-        </section>
-        <section class="install-help" aria-labelledby="launch-help-title">
-          <h3 id="launch-help-title">Если macOS блокирует запуск</h3>
-          <p>После первой попытки запуска открой «Системные настройки → Конфиденциальность и безопасность» → «Всё равно открыть» (Open Anyway). Разрешай запуск только сборки, источнику которой доверяешь.</p>
         </section>
         <section class="install-help" aria-labelledby="thumbnail-help-title">
           <h3 id="thumbnail-help-title">Чтобы не было двух миниатюр</h3>
