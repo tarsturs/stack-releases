@@ -12,6 +12,11 @@
   --type-body: 20px;
   --type-caption: var(--type-body);
   --corner-width: 6.5rem;
+  --paragraph-spacing: .8rem;
+  --media-spacing: 1rem;
+  --heading-before: 3.5rem;
+  --subheading-before: 1.5rem;
+  --list-spacing: 1.6rem;
 }
 * { box-sizing: border-box; }
 html { font-size: var(--type-body); scroll-padding-top: 2rem; }
@@ -23,16 +28,17 @@ a:focus-visible, button:focus-visible, video:focus-visible { outline: 2px solid 
 h1, h2, p, figure, dl { margin: 0; }
 h1, h2, strong, dt { font-weight: 500; }
 h1 { color: var(--ids__accent); font-size: var(--type-display); line-height: .99; letter-spacing: -.045em; }
-h2 { font-size: var(--type-heading); line-height: 1.12; letter-spacing: -.025em; margin-bottom: .65em; }
-p + p { margin-top: .75em; }
+h2 { font-size: var(--type-heading); line-height: 1.12; letter-spacing: -.025em; margin-block: var(--heading-before) .65em; }
+p:not(:last-child) { margin-bottom: var(--paragraph-spacing); }
+figure { margin-bottom: var(--media-spacing); }
 .caption { color: var(--ids__text-caption); font-size: var(--type-caption); }
 .masthead { padding-top: 2rem; }
 .brand { position: fixed; right: 0; bottom: 0; z-index: 10; display: block; width: var(--corner-width); height: auto; }
 nav { display: flex; flex-wrap: wrap; gap: 1.4rem; font-size: var(--type-caption); }
 .hero { display: grid; grid-template-columns: minmax(0, 1fr); gap: 1.1rem; padding-block: 2rem 0; }
 .hero-copy { min-width: 0; }
-.hero h1 { font-size: clamp(2.3rem, 4.2vw, 3rem); line-height: 1.05; }
-.lead { margin-top: .9rem; line-height: 1.4; }
+.hero h1 { font-size: clamp(2.3rem, 4.2vw, 3rem); line-height: 1.05; margin-bottom: .9rem; }
+.lead { line-height: 1.4; }
 .hero-download { padding-bottom: .15rem; }
 .hero-download .caption { font-size: .75rem; }
 .hero-product { min-width: 0; }
@@ -41,16 +47,14 @@ nav { display: flex; flex-wrap: wrap; gap: 1.4rem; font-size: var(--type-caption
 .download-link:hover { background: var(--ids__accent); color: var(--ids__background); }
 .hero-download > .caption { margin-bottom: .45rem; }
 video { display: block; width: 100%; height: auto; background: #17151b; }
-.feature { padding-top: 3.5rem; }
 .chapter-main { max-width: 36rem; }
 .chapter-image { display: block; width: 100%; height: auto; }
-.install { padding-block: 4.5rem 3rem; }
-.ai-projects-demo { width: 100%; margin-block: 16px 1.2rem; }
-.onboarding-demo { width: 18rem; max-width: 100%; margin-block: 1rem; }
-.install ol { padding-left: 1.3rem; margin-block: 1.6rem; }
+.install { margin-bottom: 3rem; }
+.ai-projects-demo { width: 100%; }
+.onboarding-demo { width: 18rem; max-width: 100%; }
+.install ol { padding-left: 1.3rem; margin-block: var(--list-spacing); }
 .install li { padding-left: .2rem; margin-bottom: .6rem; }
-.install-help { margin-top: 1.5rem; }
-.install-help h3 { margin: 0; font-size: 1rem; font-weight: 500; }
+.install-help h3 { margin: var(--subheading-before) 0 0; font-size: 1rem; font-weight: 500; }
 .site-footer { padding-bottom: calc(var(--corner-width) * 13 / 24 + 1rem); }
 .site-footer a { color: var(--ids__text); text-decoration-color: currentColor; }
 .site-footer a:hover { color: var(--ids__accent); }
@@ -58,8 +62,8 @@ video { display: block; width: 100%; height: auto; background: #17151b; }
 .skip-link:focus { transform: translateY(0); }
 @media (width >= 768px) and (height < 800px) {
   .hero { padding-top: 1.2rem; }
-  .hero h1 { font-size: 2.4rem; }
-  .lead { margin-top: .6rem; font-size: .9rem; }
+  .hero h1 { font-size: 2.4rem; margin-bottom: .6rem; }
+  .lead { font-size: .9rem; }
   .hero-video { max-height: max(16rem, calc(100svh - 14rem)); }
 }
 @media (width < 768px) {
@@ -67,17 +71,17 @@ video { display: block; width: 100%; height: auto; background: #17151b; }
     --type-display: 48px;
     --type-heading: 28px;
     --corner-width: 5.7rem;
+    --heading-before: 2.5rem;
   }
   .ids__wrapper { width: calc(100% - 2.25rem); }
   .masthead { padding-top: 1.4rem; }
   .brand { position: static; z-index: auto; margin-bottom: 1rem; }
   nav { gap: .85rem; font-size: .8rem; }
   .hero { gap: 1.2rem; padding-top: 1.8rem; }
-  .hero h1 { max-width: 10em; font-size: clamp(2rem, 8.8vw, 2.8rem); }
-  .lead { max-width: 27rem; margin-top: .8rem; font-size: .9rem; }
-  .hero-product { margin-top: .5rem; }
+  .hero h1 { max-width: 10em; font-size: clamp(2rem, 8.8vw, 2.8rem); margin-bottom: .8rem; }
+  .lead { max-width: 27rem; font-size: .9rem; }
+  .hero-download { margin-bottom: .5rem; }
   .hero-video { width: 100%; max-height: none; }
-  .feature { padding-top: 2.5rem; }
-  .install { padding-block: 3rem 2rem; }
+  .install { margin-bottom: 2rem; }
   .site-footer { padding-bottom: 2rem; }
 }
