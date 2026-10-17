@@ -9,21 +9,25 @@
   <link rel="icon" href="favicon.ico" sizes="16x16 32x32 48x48" type="image/x-icon">
   <link rel="icon" href="assets/favicon.svg" sizes="any" type="image/svg+xml">
   <link rel="stylesheet" href="assets/fonts.css">
-  <link rel="stylesheet" href="assets/site.css?v=19">
+  <link rel="stylesheet" href="assets/site.css?v=20">
   <script src="assets/site.js?v=1" defer></script>
 </head>
 <body class="ids">
   <a class="skip-link" href="#main">К содержанию</a>
   <header class="ids__wrapper masthead">
     <img class="brand" src="assets/stack-corner-logo.svg" width="960" height="520" alt="Stack">
-    <nav aria-label="Разделы страницы"><a href="#how">Как работает</a><a href="#ai">Результаты ИИ</a><a href="#download">Скачать</a></nav>
+    <nav aria-label="Разделы страницы"><a href="#how">Как работает</a><a href="#ai">Для ИИ-агентов</a><a href="#download">Скачать</a></nav>
   </header>
 
   <main id="main">
     <section class="ids__wrapper hero" aria-labelledby="page-title">
       <div class="hero-copy">
         <h1 id="page-title">Скриншоты под&nbsp;рукой.</h1>
-        <p class="lead">Снимки и записи экрана — из угла Mac прямо в чат.</p>
+        <p class="lead">Stack собирает скриншоты и видео в углу экрана. Выбирай нужные и перетаскивай в чат.</p>
+      </div>
+      <div class="hero-download">
+        <p class="caption">macOS 14+</p>
+        <a class="download-link" href="https://github.com/tarsturs/stack-releases/releases/latest/download/stack-macOS-universal.zip">Скачать для Mac <span aria-hidden="true">↓</span></a>
       </div>
       <figure class="hero-product">
         <video class="hero-video" controls autoplay muted loop playsinline preload="metadata" width="1600" height="832" poster="assets/stack-hero-poster.jpg" aria-label="Запись работы Stack: выбор четырёх скриншотов и перетаскивание в чат">
@@ -31,33 +35,24 @@
           <a href="assets/stack-hero.mp4">Посмотреть демонстрацию Stack</a>
         </video>
       </figure>
-      <div class="hero-download">
-        <p class="caption">macOS 14+</p>
-        <div class="hero-actions">
-          <a class="download-link" href="https://github.com/tarsturs/stack-releases/releases/latest/download/stack-macOS-universal.zip">Скачать для Mac <span aria-hidden="true">↓</span></a>
-          <a class="caption" href="#download">Установка</a>
-        </div>
-      </div>
     </section>
 
     <section class="ids__wrapper feature" id="how" aria-labelledby="send-title">
       <div class="chapter-main">
         <h2 id="send-title">Отправь всё нужное</h2>
-        <p>Несколько снимков и видео отправляются в чат одним перетаскиванием — отдельными файлами, без склейки и перекодирования.</p>
-        <p>Привычные сочетания macOS тоже работают: <kbd>⌘C</kbd>, выделение с <kbd>⌘</kbd> и <kbd>⇧</kbd>, быстрый просмотр по пробелу.</p>
-        <p>История сохраняется после перезапуска. Отправка не удаляет исходные файлы.</p>
+        <p>Выбери нужные скриншоты в стопке и перетащи их в поле сообщения.</p>
+        <p>На видео четыре снимка прикрепляются к чату за один раз — каждый отдельным файлом.</p>
       </div>
     </section>
 
     <section class="ids__wrapper feature" id="ai" aria-labelledby="ai-title">
       <div class="chapter-main">
-        <h2 id="ai-title">Скриншоты от ИИ — отдельно по проектам</h2>
-        <p>Скриншоты и видео от агента появляются в другом углу. Проекты не смешиваются: у каждого своя история.</p>
+        <h2 id="ai-title">Агентские скриншоты — в другом углу</h2>
+        <p>Stack сам создаёт папку <code>~/Pictures/stack/AI</code>. Агент сохраняет туда снимки и видео, отдельно для каждого проекта — ему нужен доступ к файлам на твоём Mac.</p>
         <figure class="ai-projects-demo">
           <img class="chapter-image" src="assets/stack-ai-projects.webp" width="1506" height="1366" loading="lazy" decoding="async" alt="Три скриншота проекта Stack в левом углу рабочего стола. Нижний снимок выделен жёлтой рамкой.">
         </figure>
         <p>Скопируй инструкцию через <strong>Copy Instructions for AI</strong> в меню Stack и отправь своему ИИ-агенту. Попроси показать результат скриншотом или видео.</p>
-        <p>Stack сам создаёт папку <code>~/Pictures/stack/AI</code>. Агент сохраняет туда снимки и видео, отдельно для каждого проекта — ему нужен доступ к файлам на твоём Mac.</p>
         <p>Чтобы выбрать другую папку, открой <strong>Settings… → AI capture folder → Change…</strong>. После смены папки скопируй инструкцию заново и передай агенту.</p>
       </div>
     </section>
@@ -96,5 +91,8 @@
       </div>
     </section>
   </main>
+  <footer class="ids__wrapper site-footer" id="author">
+    <p><a href="https://zhanybek-portfolio-production.up.railway.app/">Проект Жаныбека Окумалиева</a></p>
+  </footer>
 </body>
 </html>

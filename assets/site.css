@@ -35,10 +35,8 @@ nav { display: flex; flex-wrap: wrap; gap: 1.4rem; font-size: var(--type-caption
 .lead { margin-top: .9rem; line-height: 1.4; }
 .hero-download { padding-bottom: .15rem; }
 .hero-download .caption { font-size: .75rem; }
-.hero-download .hero-actions { flex-direction: column; align-items: flex-start; gap: .6rem; }
 .hero-product { min-width: 0; }
 .hero-video { width: auto; max-width: 100%; max-height: max(16rem, calc(100svh - 17rem)); margin-inline: 0; border-radius: .6rem; }
-.hero-actions { display: flex; flex-wrap: wrap; align-items: baseline; gap: .55rem 1.4rem; }
 .download-link { display: inline-flex; align-items: center; justify-content: center; gap: .45em; max-width: 100%; min-height: 2.5rem; padding: .55rem .9rem; border-radius: .45rem; background: var(--ids__link); color: var(--ids__background); font-weight: 500; line-height: 1.25; text-decoration: none; }
 .download-link:hover { background: var(--ids__accent); color: var(--ids__background); }
 .hero-download > .caption { margin-bottom: .45rem; }
@@ -46,14 +44,16 @@ video { display: block; width: 100%; height: auto; background: #17151b; }
 .feature { padding-top: 3.5rem; }
 .chapter-main { max-width: 36rem; }
 .chapter-image { display: block; width: 100%; height: auto; }
-kbd { font: inherit; font-weight: 500; white-space: nowrap; }
-.install { padding-block: 4.5rem calc(var(--corner-width) * 13 / 24 + 1rem); }
+.install { padding-block: 4.5rem 3rem; }
 .ai-projects-demo { width: 100%; margin-block: 16px 1.2rem; }
 .onboarding-demo { width: 18rem; max-width: 100%; margin-block: 1rem; }
 .install ol { padding-left: 1.3rem; margin-block: 1.6rem; }
 .install li { padding-left: .2rem; margin-bottom: .6rem; }
 .install-help { margin-top: 1.5rem; }
 .install-help h3 { margin: 0; font-size: 1rem; font-weight: 500; }
+.site-footer { padding-bottom: calc(var(--corner-width) * 13 / 24 + 1rem); }
+.site-footer a { color: var(--ids__text); text-decoration-color: currentColor; }
+.site-footer a:hover { color: var(--ids__accent); }
 .skip-link { position: absolute; top: .4rem; left: .4rem; padding: .6rem; background: var(--ids__background); transform: translateY(-200%); }
 .skip-link:focus { transform: translateY(0); }
 @media (width >= 768px) and (height < 800px) {
@@ -75,9 +75,9 @@ kbd { font: inherit; font-weight: 500; white-space: nowrap; }
   .hero { gap: 1.2rem; padding-top: 1.8rem; }
   .hero h1 { max-width: 10em; font-size: clamp(2rem, 8.8vw, 2.8rem); }
   .lead { max-width: 27rem; margin-top: .8rem; font-size: .9rem; }
-  .hero-download .hero-actions { flex-direction: row; align-items: center; gap: .7rem 1rem; }
   .hero-product { margin-top: .5rem; }
   .hero-video { width: 100%; max-height: none; }
   .feature { padding-top: 2.5rem; }
   .install { padding-block: 3rem 2rem; }
+  .site-footer { padding-bottom: 2rem; }
 }
